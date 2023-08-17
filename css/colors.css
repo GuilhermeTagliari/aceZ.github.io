@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f4f4f4, #ddd);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.product p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.product strong {
+    color: #333;
+}
+
+.address {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.address p {
+    margin: 5px 0;
+}
+
+iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.comments {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Estilo do carrinho e finalizar compra */
+#cartModal {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: auto;
+    /* Remove a propriedade 'left' */
+    right: 20px;
+    /* Posiciona à direita */
+    max-width: 400px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    z-index: 1000;
+}
+
+#cartModal h2 {
+    margin-top: 0;
+}
+
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cartItems li {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cartItems li span {
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    /* Tamanho maior */
+    cursor: pointer;
+}
+
+.payment-btn {
+    display: block;
+    margin-top: 10px;
+}
+
+.fixed-cart {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #333;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fixed-cart img {
+    width: 30px;
+    height: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.btn {
+    /* ... (seu estilo CSS atual) ... */
+    padding: 10px 15px;
+}
+
+.product {
+    /* ... (seu estilo CSS atual) ... */
+    padding: 15px;
+}
+
+.product h2 {
+    /* ... (seu estilo CSS atual) ... */
+    font-size: 20px;
+}
+
+.comments {
+    /* ... (seu estilo CSS atual) ... */
+    padding: 10px;
+}
+
+.modal-content {
+    /* ... (seu estilo CSS atual) ... */
+    padding: 15px;
+}
+
+.added-message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+}
+
+.added-message.show {
+    display: block;
+}
+
+.rating {
+    color: #FFD700;
+    /* Cor das estrelas amarelas */
+}
+
+.star {
+    font-size: 20px;
+    margin-right: 3px;
+}

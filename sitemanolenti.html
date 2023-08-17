@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Restaurante Do Lenti</title>
+    <link rel="shortcut icon" href="ico/maconha.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/colors.css">
+    
+</head>
+
+<body>
+    <div class="header">
+        <h1>Restaurante Do Lenti</h1>
+        <p>Descubra uma experiência gastronômica única</p>
+    </div>
+
+    <div class="container">
+        <h2>Cardápio</h2>
+
+        <div class="product">
+            <img src="https://www.estadao.com.br/resizer/wlhqrQHRs-qmDE6b2ppNII3bK_c=/720x503/filters:format(jpg):quality(80):focal(-5x-5:5x5)/cloudfront-us-east-1.images.arcpublishing.com/estadao/IR2AE2GCWBMHLNIF7W7FBFLMN4.jpg"
+                alt="Pão de Queijo">
+            <h2>Pão de Queijo</h2>
+            <p>Pão de Queijo do bar Marista Conceição</p>
+            <p><strong>Preço: 2 por R$8,00</strong></p>
+            <a href="#" class="btn" onclick="addToCart(' 2 Pão de Queijo', 8.00)">Peça Agora</a>
+        </div>
+
+        <div class="product">
+            <img src="https://vapeinga.com/wp-content/uploads/2023/07/a6d61a44c17812959495e0ff1b6837f3.jpg" alt="Balmy">
+            <h2>Cool Menthol Balmy</h2>
+            <p>600 puffs.</p>
+            <p><strong>Preço: R$60,00</strong></p>
+            <a href="#" class="btn" onclick="addToCart('Cool Menthol Balmy', 60.00)">Peça Agora</a>
+        </div>
+
+        <div class="product">
+            <img src="https://down-br.img.susercontent.com/file/45400f4b1ff9ac53cddac378bc120364"
+                alt="Cerveja Spaten Long">
+            <h2>Cerveja Spaten Long</h2>
+            <p>SPATEN: Autoridade em cerveja. Uma das primeiras puro malte do mundo e uma das cervejarias oficiais da
+                Oktoberfest de Munique, na Alemanha. Feita com um rigoroso processo, seguindo a receita de Munique, onde
+                foi criada em 1397. Uma cerveja puro malte com um sabor marcante e amargor presente.</p>
+            <p><strong>Preço: R$7,00</strong></p>
+            <a href="#" class="btn" onclick="addToCart('Spaten Long', 7.00)">Peça Agora</a>
+        </div>
+
+        <div class="product">
+            <img src="https://cannactiva.com/wp-content/uploads/2023/01/brownie-marihuana-hierba-2048x1365.jpg"
+                alt="Brownie do Lenti">
+            <h2>Brownie do Lenti</h2>
+            <p>Brownie com uma receita misteriosa.</p>
+            <p><strong>Preço: R$20,25 por pedaço</strong></p>
+            <a href="#" class="btn" onclick="addToCart('Brownie Misterioso', 20.25)">Peça Agora</a>
+        </div>
+
+        <div class="fixed-cart" onclick="openCart()">
+            <img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Carrinho">
+        </div>
+
+        <div class="comments">
+            <h2>Comentários dos Clientes</h2>
+            <div class="comment">
+                <div class="rating">
+                    <span class="star">&#9733;</span><span class="star">&#9733;</span><span
+                        class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+                </div>
+                <p>"Ótimo atendimento, o dono é um GOSTOSO" - Maria Donadussi</p>
+            </div>
+            <div class="comment">
+                <div class="rating">
+                    <span class="star">&#9733;</span><span class="star">&#9733;</span><span
+                        class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+                </div>
+                <p>"O brownie é simplesmente incrível. Estou viciado!" - João Vítor Mercante</p>
+            </div>
+        </div>
+
+        <div class="address">
+            <h2>Endereço</h2>
+            <p>Restaurante do Lenti</p>
+            <p>Rua Uruguai, 407</p>
+            <p>Bairro Centro</p>
+            <p>Passo Fundo - RS</p>
+        </div>
+
+        <div class="container">
+            <h2>Localização no Mapa</h2>
+            <iframe
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBfannthnUiXbnV9P6faWnmgWhpjD3k29c&zoom=15&q=R. Uruguai, 407 - Centro, Passo Fundo - RS, 99010-110S"
+                frameborder="0" allowfullscreen=""></iframe>
+        </div>
+
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2>Finalizar Compra</h2>
+                <p>Escolha uma opção de pagamento:</p>
+                <button class="payment-btn" onclick="choosePayment('dinheiro')">Dinheiro</button>
+                <button class="payment-btn" onclick="choosePayment('pix')">PIX</button>
+                <button class="payment-btn" onclick="choosePayment('cartao')">Cartão</button>
+            </div>
+        </div>
+
+        <!-- Carrinho de compras -->
+        <div class="modal" id="cartModal">
+            <div class="modal-content" style="right: 20px;">
+                <span class="close-btn" onclick="closeCart()">&times;</span>
+                <h2>Carrinho de Compras</h2>
+                <ul id="cartItems"></ul>
+                <div id="totalAmount" class="center"><strong>Total: R$0,00</strong></div>
+                <button class="payment-btn" onclick="showPaymentOptions()">Finalizar Compra</button>
+            </div>
+        </div>
+
+        <div class="modal" id="paymentInfoModal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closePaymentInfoModal()">&times;</span>
+                <h2>Detalhes do Pagamento</h2>
+                <p id="paymentDetails"></p>
+            </div>
+        </div>
+
+
+        <script src="js/script.js"></script>       
+</body>
+</html>
