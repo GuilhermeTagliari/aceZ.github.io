@@ -86,22 +86,22 @@ var cartItems = [];
                 } else {
                     cartItems.splice(index, 1); // Remove completamente o item do carrinho
                 }
-                updateCart(); // Atualiza a exibição do carrinho
+                updateCart(); 
             }
 
             function createAddFunction(index) {
                 return function () {
                     addItemToCart(index);
-                    itemAdded = true; // Define a variável para indicar que um item foi adicionado
+                    itemAdded = true;
                     itemRemoved = false;
                 };
             }
 
             function createRemoveFunction(index) {
                 return function () {
-                    removeCartItem(index); // Remove o item correspondente
+                    removeCartItem(index);
                     itemAdded = false;
-                    itemRemoved = true; // Define a variável para indicar que um item foi removido
+                    itemRemoved = true; 
                 };
             }
 
@@ -135,15 +135,14 @@ var cartItems = [];
                 var paymentDetailsElement = document.getElementById("paymentDetails");
 
                 if (paymentMethod === "pix") {
-                    // Exibir o QR Code (substitua 'url_do_seu_qr_code' pela URL real do seu QR Code)
                     paymentDetailsElement.innerHTML = `
                     <div style="display: flex; justify-content: center; align-items: center; height: 10%;">
                         <img src="https://cdn.discordapp.com/attachments/1063955795345145968/1141585419415330899/Screenshot_20230817-011155_Chrome.jpg" alt="QR Code PIX" style="max-width: 100%; max-height: 70vh;">
                     </div>
                 `;
-                    paymentInfoModal.style.display = "block"; // Abre o modal de detalhes do pagamento
+                    paymentInfoModal.style.display = "block"; 
 
-                    paymentInfoModal.style.display = "block"; // Abre o modal de detalhes do pagamento
+                    paymentInfoModal.style.display = "block";
 
                 } else if (paymentMethod === "dinheiro") {
                     paymentDetailsElement.innerHTML = `
@@ -158,7 +157,7 @@ var cartItems = [];
                     <button onclick="processCashPayment()">Pagar</button>
                 `;
 
-                    paymentInfoModal.style.display = "block"; // Abre o modal de detalhes do pagamento
+                    paymentInfoModal.style.display = "block"; 
 
                 } else if (paymentMethod === "cartao") {
                     paymentDetailsElement.innerHTML = `
@@ -180,7 +179,7 @@ var cartItems = [];
                     <button onclick="processCardPayment()">Pagar</button>
                 `;
 
-                    paymentInfoModal.style.display = "block"; // Abre o modal de detalhes do pagamento
+                    paymentInfoModal.style.display = "block"; 
                 }
             }
             function getTotalAmount() {
