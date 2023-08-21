@@ -134,9 +134,7 @@ iframe {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     display: none;
     left: auto;
-    /* Remove a propriedade 'left' */
     right: 20px;
-    /* Posiciona à direita */
     max-width: 400px;
     padding: 20px;
     position: fixed;
@@ -173,7 +171,6 @@ iframe {
     top: 10px;
     right: 10px;
     font-size: 24px;
-    /* Tamanho maior */
     cursor: pointer;
 }
 
@@ -213,27 +210,22 @@ h3 {
 }
 
 .btn {
-    /* ... (seu estilo CSS atual) ... */
     padding: 10px 15px;
 }
 
 .product {
-    /* ... (seu estilo CSS atual) ... */
     padding: 15px;
 }
 
 .product h2 {
-    /* ... (seu estilo CSS atual) ... */
     font-size: 20px;
 }
 
 .comments {
-    /* ... (seu estilo CSS atual) ... */
     padding: 10px;
 }
 
 .modal-content {
-    /* ... (seu estilo CSS atual) ... */
     padding: 15px;
 }
 
